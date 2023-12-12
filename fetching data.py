@@ -6,18 +6,20 @@ def fetchdata(url,path):
     with open(path,"w") as f:
         f.write(r.text)
 
-pro = requests.get("https://api.ipify.org?format=json")
+#The next line is used to provide a proxy server.
+pro = requests.get('proxy server link')
 
-url='https://www.scrapethissite.com/'
+url='link of the targeted site'
 
 fetchdata(url,"sample.html")
+#We store the fetched data in sample.html file
 
 with open("sample.html",'r') as f:
     html_doc=f.read()
 soup = BeautifulSoup(html_doc,'html.parser')
 
 #code
-#print(soup.prettify())
+print(soup.prettify())
 
 #title
 print("\nTITLE \t TYPE")
